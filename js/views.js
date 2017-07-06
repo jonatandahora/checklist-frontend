@@ -69,7 +69,7 @@ var Checklist = Checklist || {};
 			}
 
 			if (e.which === ESC_KEY) {
-				this.ui.edit.val(this.model.get('title'));
+				this.ui.edit.val(this.model.get('description'));
 				this.$el.removeClass('editing');
 			}
 		}

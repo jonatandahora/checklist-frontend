@@ -42,7 +42,7 @@ var Checklist = Checklist || {};
 	Checklist.Tasks = Backbone.Collection.extend({
 		model: Checklist.Task,
 
-		url: 'http://localhost:3000',
+		url: 'http://localhost:3000/api/v1/tasks',
 
 		comparator: 'created',
 

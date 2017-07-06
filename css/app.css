@@ -1,0 +1,4 @@
+#app.filter-active #task-list .finished,
+#app.filter-finished #task-list .active {
+	display: none;
+}
