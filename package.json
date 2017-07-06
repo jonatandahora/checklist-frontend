@@ -11,6 +11,6 @@
     "node": "4.2.6"
   },
   "scripts": {
-    "start": "sudo static -p 80"
+    "start": "static"
   }
 }
