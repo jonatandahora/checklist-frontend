@@ -58,7 +58,7 @@ var Checklist = Checklist || {};
 		ui: {
 			filters: '#filters a',
 			finished: '.finished a',
-			active: '.active a',
+			doing: '.doing a',
 			all: '.all a',
 			summary: '#task-count',
 			clear: '#clear-finished'
@@ -73,8 +73,8 @@ var Checklist = Checklist || {};
 		},
 
 		templateContext: {
-			activeCountLabel: function () {
-				return (this.activeCount === 1 ? 'item' : 'items') + ' left';
+			doingCountLabel: function () {
+				return (this.doingCount === 1 ? 'item' : 'items') + ' left';
 			}
 		},
 
@@ -83,13 +83,13 @@ var Checklist = Checklist || {};
 		},
 
 		serializeData: function () {
-			var active = this.collection.getActive().length;
+			var doing = this.collection.getDoing().length;
 			var total = this.collection.length;
 
 			return {
-				activeCount: active,
+				doingCount: doing,
 				totalCount: total,
-				finishedCount: total - active
+				finishedCount: total - doing
 			};
 		},
 
@@ -99,9 +99,9 @@ var Checklist = Checklist || {};
 		},
 
 		updateFilterSelection: function () {
-			this.ui.filters.removeClass('selected');
+			this.ui.filters.removeClass('active');
 			this.ui[filterChannel.request('filterState').get('filter')]
-			.addClass('selected');
+			.addClass('active');
 		},
 
 		onClearClick: function () {

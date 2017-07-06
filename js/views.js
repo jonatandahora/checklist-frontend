@@ -13,7 +13,7 @@ var Checklist = Checklist || {};
 		template: '#template-taskItemView',
 
 		className: function () {
-			return this.model.get('finished') ? 'finished' : 'active';
+			return this.model.get('finished') ? 'finished' : 'doing';
 		},
 
 		ui: {

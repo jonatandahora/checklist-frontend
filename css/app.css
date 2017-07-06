@@ -1,4 +1,103 @@
-#app.filter-active #task-list .finished,
-#app.filter-finished #task-list .active {
-	display: none;
+#app.filter-doing #task-list .finished,
+#app.filter-finished #task-list .doing {
+	display: none
+}
+#app{
+	text-align: center
+}
+ul{
+	list-style-type: none
+}
+.destroy {
+	color: #cc9a9a;
+	transition: color 0.2s ease-out;
+  margin: 0;
+  padding: 0;
+	border: 0;
+	background: none;
+  font-size: 15px;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.destroy:hover{
+	color: red;
+	display: block;
+}
+
+
+.destroy:after{
+	content: "x"
+}
+
+#filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+#filters li {
+	display: inline;
+}
+
+#clear-finished,
+html #clear-finished:active {
+	float: right;
+	position: relative;
+	line-height: 20px;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+}
+
+#clear-finished:hover {
+	text-decoration: underline;
+}
+
+#task-count {
+	float: left;
+	text-align: left;
+}
+
+#task-count strong {
+	font-weight: 300;
+}
+
+#task-list{
+	padding-left: 0
+}
+
+.view{
+	margin: 15px 0
+}
+
+.form-control{
+	height: 45px !important
+}
+
+#toggle-all{
+	margin: 15px 0;
+}
+
+#toggle-all-label{
+	font-size: 20px
+}
+
+#new-task{
+	margin-bottom: 15px
+}
+
+.finished input{
+	color: green;
+	font-weight: 700;
 }

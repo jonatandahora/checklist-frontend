@@ -23,7 +23,7 @@ var Checklist = Checklist || {};
 
 		matchesFilter: function (filter) {
 
-			if (filter === 'active') {
+			if (filter === 'doing') {
 				return !this.isFinished();
 			}
 
@@ -42,6 +42,10 @@ var Checklist = Checklist || {};
 	Checklist.Tasks = Backbone.Collection.extend({
 		model: Checklist.Task,
 
+		parse: function(response){
+       return response.tasks;
+    },
+
 		url: 'http://localhost:3000/api/v1/tasks',
 
 		comparator: 'created',
@@ -50,7 +54,7 @@ var Checklist = Checklist || {};
 			return this.filter(this._isFinished);
 		},
 
-		getActive: function () {
+		getDoing: function () {
 			return this.reject(this._isFinished);
 		},
 
