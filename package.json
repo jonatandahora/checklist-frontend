@@ -5,12 +5,13 @@
     "backbone.marionette": "^3.0.0",
     "backbone.radio": "^2.0.0",
     "jquery": "^1.12.2",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "node-static": "^0.7.9"
   },
   "engines": {
     "node": "4.2.6"
   },
   "scripts": {
-    "start": "ruby -run -e httpd . -p 9000"
+    "start": "static"
   }
 }

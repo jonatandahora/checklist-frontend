@@ -46,7 +46,7 @@ var Checklist = Checklist || {};
        return response.tasks;
     },
 
-		url: 'http://localhost:3000/api/v1/tasks',
+		url: 'https://checklist-backend.herokuapp.com/api/v1/tasks',
 
 		comparator: 'created',
 
